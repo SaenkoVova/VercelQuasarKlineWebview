@@ -1,0 +1,191 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../quasar.variables";
+
+.pairs {
+  height: 334px;
+
+  @include min-screen(lg) {
+    padding-top: 26px;
+    padding-bottom: 40px;
+    border-bottom: $border;
+    height: 514px;
+  }
+}
+
+.pairs-tabs {
+  border-bottom: $border;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+
+  @include min-screen(md) {
+    margin-right: 15px;
+    width: 93%;
+  }
+  @include min-screen(lg) {
+    margin-right: 20px;
+    overflow-x: hidden;
+  }
+}
+
+.tab-btn {
+  font-family: $medium;
+  line-height: 21px;
+  color: $secondary;
+  padding: 0 2px 5px;
+
+  &:hover {
+    color: $accent;
+  }
+
+  &.active {
+    color: $clr-ntrl-min;
+    font-family: $bold;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, #2E6DCA 0%, #489EED 100%);
+    }
+  }
+
+  &--icon {
+    &.active {
+      &:after {
+        display: none;
+      }
+
+      ::v-deep(svg) {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+  }
+}
+
+.pairs-list {
+  position: relative;
+
+  &__scrollarea {
+    height: 267px;
+
+    @include min-screen(md) {
+      height: 391px;
+    }
+  }
+
+  .list-table {
+    &__head {
+      margin-bottom: 0;
+      padding: 5px 0 5px 21px;
+      border-bottom: $border;
+
+      @include min-screen(md) {
+        margin-right: 24px;
+      }
+    }
+
+    &__body {
+
+      @include min-screen(sm) {
+        padding-right: 24px;
+      }
+    }
+
+    &__col {
+      &:first-child {
+        width: 93px;
+      }
+      &:nth-child(2) {
+        width: 110px;
+      }
+      &:nth-child(3) {
+        width: 52px;
+      }
+    }
+
+    &__row {
+      height: 25px;
+      padding-left: 18px;
+
+      + .list-table__row {
+        border-top: $border;
+      }
+
+      .list-table__col {
+        &:nth-child(3) {
+          width: 92px;
+          margin-right: auto;
+        }
+        &:nth-child(4) {
+          width: 110px;
+          margin-right: auto;
+          text-align: right;
+        }
+        &:last-child {
+          width: 52px;
+          margin-right: 0;
+        }
+      }
+    }
+
+
+  }
+
+  &__icon {
+    left: 0;
+    position: absolute;
+
+    .icon-btn {
+      padding: 0;
+      padding-left: 4px;
+      min-height: 25px;
+      height: 100%;
+
+      @include min-screen(md) {
+        padding-left: 0;
+      }
+
+      ::v-deep(svg) {
+        width: 13px;
+        height: 12px;
+      }
+      &.active {
+        ::v-deep(svg) {
+          path {
+            fill: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.trade-fullscreen {
+  .pairs {
+    display: none;
+  }
+
+  .rates-pairs {
+    .pairs {
+      display: block;
+
+      @include min-screen(lg) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: none;
+        height: 220px;
+      }
+    }
+  }
+
+  .pairs-list__scrollarea {
+    height: 125px;
+  }
+}

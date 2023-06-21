@@ -1,0 +1,19 @@
+@import "../../lib/mixins";
+
+.loader {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+
+  @include min-screen(sm){
+    right: 0;
+    bottom: 0;
+  }
+
+  &__icon {
+    width: 62px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../lib/mixins";
+
+.col-12 {
+  + .col-12 {
+    @include min-screen(sm) {
+      padding-left: 20px;
+    }
+  }
+}
+
+.app-btn {
+  display: flex;
+  margin: 10px auto 0;
+  width: 100%;
+
+  @include min-screen(xs) {
+    width: 250px;
+  }
+}
+
+.page-input {
+  padding-bottom: 20px;
+}

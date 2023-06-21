@@ -1,0 +1,18 @@
+<svg width="70" height="50" viewBox="0 0 70 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="70" height="50" fill="#101010"/>
+<rect x="24" y="41" width="10" height="3" fill="#F13B5C"/>
+<rect x="36" y="41" width="10" height="3" fill="#1FA675"/>
+<rect opacity="0.1" x="15" y="3" width="40" height="34" fill="#D9D9D9"/>
+<rect opacity="0.1" x="3" y="3" width="10" height="16" fill="#D9D9D9"/>
+<rect opacity="0.1" x="3" y="21" width="10" height="16" fill="#D9D9D9"/>
+<rect opacity="0.1" x="57" y="3" width="10" height="16" fill="#D9D9D9"/>
+<rect opacity="0.1" x="57" y="21" width="10" height="16" fill="#D9D9D9"/>
+<g opacity="0.5">
+<path d="M21 24.3077H24.8889V32H21V24.3077Z" fill="#101010"/>
+<path d="M25.6667 19.6923H29.5556V32H25.6667V19.6923Z" fill="#101010"/>
+<path d="M30.3333 21.2308H34.2222V32H30.3333V21.2308Z" fill="#101010"/>
+<path d="M35.7778 16.6154H39.6667V32H35.7778V16.6154Z" fill="#101010"/>
+<path d="M40.4444 18.9231H44.3333V32H40.4444V18.9231Z" fill="#101010"/>
+<path d="M45.1111 12H49V32H45.1111V12Z" fill="#101010"/>
+</g>
+</svg>

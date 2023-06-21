@@ -1,0 +1,102 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../quasar.variables";
+
+.chart {
+  background: transparent;
+  padding: 0;
+
+  @include min-screen(md) {
+    border-bottom: $border;
+    padding: 0 0 22px;
+  }
+
+  .title-md {
+    display: none;
+
+    @include min-screen(md) {
+      display: block;
+    }
+  }
+
+  &__head {
+    padding: 0 5px;
+    flex-direction: column;
+
+    @include min-screen(xs) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @include min-screen(md) {
+      padding: 15px 10px;
+    }
+    @include min-screen(lg) {
+      padding: 20px 30px;
+    }
+  }
+
+  &__btns {
+    margin-bottom: 10px;
+
+    @include min-screen(md) {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__options {
+    font-size: 10px;
+    line-height: 12px;
+    z-index: 5;
+    top: -20px;
+  }
+
+  &.fullscreen {
+    background: #08080B;
+
+    .chart-wrap {
+      height: 90% !important;
+    }
+  }
+
+}
+
+.chart-btn {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px 5px;
+
+  &:hover {
+    color: $accent;
+
+    ::v-deep(svg) {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+
+  &.active {
+    color: $primary;
+    font-family: $medium;
+  }
+}
+
+
+.trade-fullscreen {
+  .chart {
+    @include min-screen(lg) {
+      padding: 0 30px 0 10px;
+    }
+
+    &__options {
+      margin-bottom: 32px;
+    }
+
+    &__head {
+      @include min-screen(lg) {
+        padding: 24px 0 20px;
+      }
+    }
+  }
+}

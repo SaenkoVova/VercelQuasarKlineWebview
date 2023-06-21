@@ -1,0 +1,42 @@
+@import "../../lib/mixins";
+
+.page-head {
+ @include min-screen(md) {
+   padding-bottom: 36px;
+ }
+
+  .app-btn {
+    height: 35px;
+    width: 120px;
+  }
+}
+
+.app-select {
+  margin-right: 30px;
+}
+
+.convert-history {
+  &__filter {
+    padding: 0 30px 30px;
+
+    .app-btn {
+      width: 150px;
+    }
+  }
+
+  &__price {
+    text-align: right;
+
+    @include min-screen(md) {
+      text-align: left;
+    }
+    @include min-screen(lg) {
+      min-width: 234px;
+    }
+
+    p {
+      word-break: break-word;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../lib/mixins";
+
+.dw-card {
+  &__wrap {
+    padding: 25px 15px 30px;
+
+    @include min-screen(lg) {
+      padding: 40px 30px 70px 40px;
+    }
+  }
+
+  &__amount {
+    font-size: 18px;
+    line-height: 27px;
+
+    &--lg {
+      font-size: 36px;
+      line-height: 54px;
+      color: #2E6DCA;
+    }
+  }
+
+  &__text {
+    margin-top: 6px;
+    color: #C9C9C9;
+    line-height: 20px;
+  }
+}
+
+.title-xs {
+  margin-bottom: 3px;
+}
+
+.info-tooltip {
+  height: 24px;
+  width: 24px;
+  margin-left: 5px;
+  @include align-justify-center;
+}
+
+

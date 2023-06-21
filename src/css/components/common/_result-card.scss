@@ -1,0 +1,47 @@
+@import "../../lib/mixins";
+
+.result-card {
+  width: 100%;
+  padding: 40px 0 20px;
+  background: #1B1C22;
+  border: 1px solid #33353D;
+  border-radius: 10px;
+
+  @include min-screen(xs) {
+    width: 440px;
+  }
+  @include min-screen(sm) {
+    padding: 50px 30px 30px;
+  }
+
+  &__img {
+    width: 150px;
+    height: 170px;
+
+    @include min-screen(sm) {
+      width: 203px;
+      height: 220px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 34px;
+
+    @include min-screen(sm) {
+      font-size: 36px;
+      line-height: 54px;
+    }
+  }
+
+  &__msg {
+    font-size: 16px;
+    line-height: 22px;
+    word-break: break-word;
+
+    @include min-screen(sm) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

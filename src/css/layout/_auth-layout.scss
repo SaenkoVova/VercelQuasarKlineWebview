@@ -1,0 +1,133 @@
+@import "../lib/var";
+@import "../lib/mixins";
+@import "../quasar.variables";
+
+.auth-page {
+  min-height: 100vh;
+  @include align-justify-center;
+}
+
+.auth-block {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: #27272A;
+  @include align-column-center;
+  padding: 25px 15px;
+  justify-content: flex-start;
+
+  @include min-screen(sm) {
+    width: 630px;
+  }
+  @include min-screen(md) {
+    padding: 77px 95px;
+  }
+}
+
+.logo {
+  width: 215px;
+  margin: 0 auto 42px;
+  height: 55px;
+
+  @include min-screen(sm) {
+    width: 270px;
+    height: 55px;
+  }
+}
+
+.auth-block {
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 33px;
+
+    @include min-screen(sm) {
+      margin-bottom: 15px;
+      font-size: 36px;
+      line-height: 54px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $light;
+    text-align: center;
+    color: $secondary;
+    margin-bottom: 16px;
+    line-height: 21px;
+
+    @include min-screen(sm) {
+      margin-bottom: 24px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__opt {
+    margin: 20px 0;
+
+    @include min-screen(sm) {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    line-height: 21px;
+    color: $secondary;
+    transition: $transition;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+    border-top: 1px solid #484952;
+    padding-top: 30px;
+    text-align: center;
+
+    @include min-screen(sm) {
+      margin-top: 30px;
+    }
+
+    &__text {
+      margin-bottom: 18px;
+      font-family: $semi-bold;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+.app-btn {
+  width: 100%;
+
+  &--border {
+    text-transform: uppercase;
+    height: 50px;
+
+    @include min-screen(sm) {
+      height: 60px;
+    }
+  }
+}
+
+.link-btn {
+  font-family: $semi-bold;
+  padding: 0;
+  border-radius: 0;
+  font-size: $base-font-size;
+  min-height: 1px;
+  line-height: $base-line-height;
+  color: $primary;
+  border-bottom: 1px solid rgba(72, 158, 237, 0.2);
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+  }
+}

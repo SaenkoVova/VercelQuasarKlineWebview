@@ -1,0 +1,120 @@
+@import "../../lib/mixins";
+
+.landing {
+  background-image: url("src/assets/img/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 100px;
+
+  @include min-screen(xs) {
+    background-position: 0 145px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include min-screen(sm) {
+    padding: 0 15px;
+  }
+}
+
+.land-intro {
+  @include align-column-center;
+  justify-content: flex-start;
+  background-image: url("src/assets/img/landing-img-1.png");
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 237px;
+  background-size: 180% auto;
+  background-position: center 252px;
+
+  @include min-screen(xs) {
+    background-size: 100% auto;
+    background-position: center 197px;
+  }
+  @include min-screen(sm) {
+    background-position: center 241px;
+    padding-bottom: 230px;
+  }
+  @include min-screen(md) {
+    min-height: 80vh;
+    padding-top: 130px;
+    padding-bottom: 340px;
+    background-size: 90% auto;
+    background-position: center 367px;
+  }
+  @include min-screen(lg) {
+    padding-bottom: 450px;
+  }
+}
+
+.main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 35px;
+  line-height: 46px;
+
+  @include min-screen(xs) {
+    font-size: 40px;
+  }
+  @include min-screen(sm) {
+    font-size: 51px;
+    line-height: 63px;
+  }
+  @include min-screen(md) {
+    font-size: 72px;
+    line-height: 86px;
+  }
+}
+
+
+.app-btn {
+  border-radius: 0;
+  background: linear-gradient(90deg, #2E6DCA 0%, #489EED 100%);
+  text-transform: uppercase;
+  line-height: 30px;
+  width: 85%;
+  height: 56px;
+  font-size: 17px;
+
+  @include min-screen(xs) {
+    width: 300px;
+  }
+  @include min-screen(sm) {
+    width: 400px;
+    height: 74px;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: linear-gradient(90deg, #489EED 0%, #2E6DCA 100%);
+  }
+}
+
+.join-modal {
+  .title-lg {
+    margin-bottom: 27px;
+  }
+
+  .app-dialog {
+    &__content {
+      padding: 45px 15px 30px;
+
+      @include min-screen(sm) {
+        width: 600px;
+        max-width: 700px;
+      }
+      @include min-screen(md) {
+        padding: 60px;
+        width: 840px;
+        max-width: 840px;
+      }
+    }
+  }
+}

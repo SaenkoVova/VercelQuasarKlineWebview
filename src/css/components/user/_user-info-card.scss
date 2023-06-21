@@ -1,0 +1,184 @@
+@import "../../quasar.variables";
+@import "../../lib/var";
+@import "../../lib/mixins";
+
+.user-card {
+  padding: 30px 15px 15px;
+
+  @include min-screen(sm) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  @include min-screen(md) {
+    padding: 30px 10px 20px;
+    flex-direction: column;
+  }
+  @include min-screen(lg) {
+    padding: 50px 20px 20px;
+    min-width: 360px;
+  }
+
+  &__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    .q-img {
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    word-break: break-all;
+    line-height: 36px;
+  }
+
+  &__mail {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &__footer {
+    margin-top: 30px;
+    border-top: $border;
+    padding-top: 24px;
+    width: 100%;
+
+    @include min-screen(sm) {
+      margin-top: auto;
+      border-top: none;
+      padding-top: 0;
+    }
+    @include min-screen(md) {
+      margin-top: 30px;
+      border-top: $border;
+      padding-top: 24px;
+    }
+  }
+
+  &__amount {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+
+    &--sm {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.dark-btn {
+  width: 100%;
+  background: #181818;
+  height: 60px;
+  padding: 5px 10px 5px 12px;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  font-family: $semi-bold;
+  border: 1px solid #181818;
+
+  @media (min-width: 370px) {
+    padding: 5px 20px 5px 22px;
+    font-size: $base-font-size;
+  }
+
+  + .dark-btn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  &__verif {
+    text-transform: capitalize;
+    font-family: $medium;
+    @include align-center;
+
+    .q-icon {
+      margin-right: 4px;
+
+      @include min-screen(xs) {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  &:hover {
+    border: 1px solid #5A5C68;
+  }
+
+  svg {
+    margin-right: 8px;
+
+    @include min-screen(xs) {
+      margin-right: 12px;
+    }
+  }
+}
+
+.rounded-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: $primary;
+
+  &--delete {
+    background: $secondary;
+  }
+}
+
+.app-btn {
+  &--border {
+    width: 180px;
+  }
+}
+
+.disable-dialog {
+  .app-btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+
+.two-fa-dialog {
+
+  &__content {
+    min-height: 334px;
+    @include align-column-center;
+  }
+
+  .app-btn {
+    width: 100%;
+    height: 50px;
+    font-size: $base-font-size;
+    line-height: 27px;
+    text-transform: uppercase;
+
+    @include min-screen(md) {
+      height: 60px;
+      font-size: 18px;
+    }
+
+    + .app-btn {
+      margin-left: 15px;
+    }
+
+    svg {
+      margin-left: 10px;
+    }
+
+    &--border {
+      svg {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+

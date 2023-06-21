@@ -1,0 +1,51 @@
+@import "../../lib/mixins";
+
+.title-lg {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 15px;
+
+  @include min-screen(sm) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 33px;
+  }
+}
+
+.page-input-wrap {
+  margin-bottom: 20px;
+}
+
+.page-input {
+  padding-bottom: 20px;
+}
+
+.app-btn {
+  height: 60px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  + .app-btn {
+    margin-top: 10px;
+
+    @include min-screen(sm) {
+      margin-left: 15px;
+      margin-top: 0;
+    }
+  }
+
+  svg {
+    margin-left: 10px;
+  }
+}
+
+.create-api {
+  &__btns {
+    flex-direction: column;
+
+    @include min-screen(sm) {
+      flex-direction: row;
+    }
+  }
+}

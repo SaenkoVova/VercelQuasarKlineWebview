@@ -1,0 +1,13 @@
+@import "../../lib/mixins";
+
+.terms-page {
+  min-height: 100vh !important;
+  background-image: url("src/assets/img/soon-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include min-screen(md) {
+    background-size: 100%;
+  }
+}

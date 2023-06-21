@@ -1,0 +1,56 @@
+{
+  "name": "kline-webview",
+  "version": "0.0.1",
+  "description": "KlineWebview project",
+  "productName": "KlineWebview App",
+  "author": "FlexyChain",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "axios": "^1.4.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "core-js": "^3.31.0",
+    "dotenv": "^16.3.1",
+    "klinecharts": "^9.5.0",
+    "pinia": "^2.1.4",
+    "quasar": "^2.12.0",
+    "sockjs-client": "^1.6.1",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.2.2",
+    "webstomp-client": "^1.2.6"
+  },
+  "devDependencies": {
+    "@quasar/app-webpack": "^3.9.2",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vue": "^9.15.0",
+    "prettier": "^2.8.8"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

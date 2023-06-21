@@ -1,0 +1,77 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+
+.profile-page {
+  padding: 0 15px;
+
+  @include min-screen(lg) {
+    padding: 0;
+  }
+
+  &__info {
+    padding: 20px 0;
+
+    @include min-screen(md) {
+      padding: 30px 20px 110px 0;
+    }
+    @include min-screen(xl) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  &__table {
+    padding-top: 10px;
+    padding-bottom: 60px;
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
+
+    @include min-screen(md) {
+      width: 100%;
+      left: 0;
+      border-left: $border;
+      padding-top: 30px;
+      min-height: 90vh;
+      height: 100%;
+    }
+
+    .title-lg {
+      text-align: center;
+
+      @include min-screen(md) {
+        padding-left: 40px;
+        text-align: left;
+      }
+    }
+  }
+
+  .col-md-3 {
+    @include min-screen(md) {
+      width: 35%;
+    }
+    @include min-screen(lg) {
+      width: 30%;
+    }
+  }
+
+  .col-md-9 {
+
+    @include min-screen(md) {
+      width: 65%;
+    }
+    @include min-screen(lg) {
+      width: 70%;
+    }
+  }
+
+  .row {
+    @include min-screen(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.title-lg {
+  margin-bottom: 20px;
+}

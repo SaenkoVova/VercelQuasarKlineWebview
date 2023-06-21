@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Poppins-bold;
+  src: url(./fonts/Poppins-bold.woff);
+}
+
+@font-face {
+  font-family: Poppins-light;
+  src: url(./fonts/Poppins-light.woff);
+}
+
+@font-face {
+  font-family: Poppins-regular;
+  src: url(fonts/Poppins-regular.woff);
+}
+
+@font-face {
+  font-family: Poppins-medium;
+  src: url(./fonts/Poppins-medium.woff);
+}
+
+@font-face {
+  font-family: Poppins-semibold;
+  src: url(./fonts/Poppins-semibold.woff);
+}
+
+@font-face {
+  font-family: Poppins-extrabold;
+  src: url(./fonts/Poppins-extrabold.woff);
+}
+
+
+@font-face {
+  font-family: IBMPlexMono-Regular;
+  src: url(fonts/IBMPlexMono-Regular.woff);
+}
+
+@font-face {
+  font-family: IBMPlexMono-Medium;
+  src: url(./fonts/IBMPlexMono-Medium.woff);
+}
+
+@font-face {
+  font-family: IBMPlexMono-SemiBold;
+  src: url(./fonts/IBMPlexMono-SemiBold.woff);
+}
+
+@font-face {
+  font-family: IBMPlexMono-Bold;
+  src: url(./fonts/IBMPlexMono-Bold.woff);
+}
+
+.ft-light {
+  font-family: 'Poppins-light';
+}
+
+.ft-regular {
+  font-family: 'Poppins-regular';
+}
+
+.ft-medium {
+  font-family: 'Poppins-medium';
+}
+
+.ft-semibold {
+  font-family: 'Poppins-semibold';
+}
+
+.ft-bold {
+  font-family: 'Poppins-bold';
+}
+
+.ft-extrabold {
+  font-family: 'Poppins-extrabold';
+}
+
+.ft-num-regular {
+  font-family: 'IBMPlexMono-Regular';
+}
+
+.ft-num-medium {
+  font-family: 'IBMPlexMono-Medium';
+}
+
+.ft-num-semibold {
+  font-family: 'IBMPlexMono-SemiBold';
+}
+
+.ft-num-bold {
+  font-family: 'IBMPlexMono-Bold';
+}

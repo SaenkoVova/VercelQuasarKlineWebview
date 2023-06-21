@@ -1,0 +1,86 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+
+.no-records {
+
+  &__img {
+    width: 80px;
+    height: 100px;
+
+    @include min-screen(sm) {
+      width: 100px;
+      height: 123px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.list-table {
+  .no-records {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 0);
+
+    &__img {
+        width: 67px;
+        height: 82px;
+    }
+
+    &__title {
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      white-space: nowrap;
+
+      @include min-screen(lg) {
+        font-size: $base-font-size;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+.orderbook {
+  .list-table {
+    .no-records {
+      &__img {
+        width: 44px;
+        height: 55px;
+
+        @include min-screen(lg) {
+          width: 67px;
+          height: 82px;
+        }
+      }
+    }
+  }
+}
+
+.trade-fullscreen {
+  .no-records {
+    top: 0;
+
+    &__img {
+      width: 75px;
+      height: 92px;
+      margin-bottom: 0;
+    }
+  }
+
+  .orderbook--buy, .orderbook--sell {
+    .no-records {
+      top: 50%;
+      transform: translate(-50%, -70%);
+    }
+  }
+}

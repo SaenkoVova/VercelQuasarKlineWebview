@@ -1,0 +1,81 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+
+.calc {
+  background: transparent;
+}
+
+.calc-form {
+  width: 100%;
+
+  @include min-screen(xl) {
+    width: calc(100% - 20px);
+  }
+
+  + .calc-form {
+    margin-left: 20px;
+
+    @include min-screen(xl) {
+      margin-left: 40px;
+    }
+
+  }
+
+  &__best {
+    background: #242424;
+    border: 1px dashed rgba(58, 59, 68, 0.6);
+    border-radius: 4px;
+    height: 40px;
+    @include align-justify-center;
+    text-transform: capitalize;
+    width: 74%;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.app-btn {
+  height: 50px;
+
+  a {
+    margin: 0 4px;
+  }
+}
+
+.trade-fullscreen {
+  .app-btn {
+    &--border {
+      font-size: 12px;
+    }
+  }
+
+    .calc-form {
+      @include min-screen(md) {
+        padding: 0 10px 20px;
+        width: 100%;
+      }
+      @include min-screen(lg) {
+        padding: 0 15px 30px;
+        height: calc(100% - 50px);
+      }
+      @include min-screen(xxl) {
+        padding: 0 30px 30px;
+      }
+
+      + .calc-form {
+
+        @include min-screen(md) {
+          border-left: $border;
+          margin-left: 0;
+        }
+        @include min-screen(lg) {
+          padding-right: 15px;
+        }
+        @include min-screen(xxl) {
+          padding-right: 40px;
+        }
+      }
+    }
+
+
+}

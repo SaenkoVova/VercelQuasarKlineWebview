@@ -1,0 +1,337 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../quasar.variables";
+
+.app-header {
+  background: #27272A;
+  padding: 0 0 0 5px;
+  height: 60px;
+  @include align-center;
+  border-bottom: 1px solid rgba(137, 140, 154, 0.2);
+
+  @include min-screen(md) {
+    height: 70px;
+    padding: 0 5px;
+    border-bottom: none;
+  }
+
+  &__wrap {
+    height: 100%;
+    padding: 0;
+
+    @include min-screen(md) {
+      padding: 0 12px;
+    }
+  }
+}
+
+.logo {
+  margin-right: auto;
+  height: 100%;
+
+  @include min-screen(md) {
+    margin-right: 20px;
+  }
+  @include min-screen(lg) {
+    margin-right: 50px;
+  }
+}
+
+.land-header {
+  @include align-center;
+  padding: 20px 15px 0;
+
+  @include min-screen(xl) {
+    padding: 80px 0 0;
+  }
+
+  .logo {
+    height: 50px;
+    margin-right: auto;
+
+    @include min-screen(md) {
+      margin-right: 100px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.main-nav {
+  display: none;
+  height: 100%;
+
+  @include min-screen(md) {
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    font-family: $bold;
+    font-size: 16px;
+    line-height: 48px;
+    opacity: 1;
+    padding: 0;
+
+    @include min-screen(md) {
+      line-height: 21px;
+      font-size: $base-font-size;
+      font-family: $semi-bold;
+    }
+
+    &:hover {
+      color: $primary;
+
+      .main-nav__btn__icon {
+        ::v-deep(svg) {
+          path, rect {
+            stroke: $primary;
+          }
+        }
+      }
+
+      .main-nav__btn__arrow {
+        ::v-deep(svg) {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+
+    &__wrap {
+      padding: 0;
+    }
+
+    &__icon {
+      @include align-justify-center;
+      margin-right: 10px;
+
+      @include min-screen(md) {
+        margin-right: 5px;
+      }
+    }
+
+    &__arrow {
+      margin-left: 5px;
+    }
+
+    + .main-nav__btn {
+
+      @include min-screen(md) {
+        margin-left: 50px;
+      }
+    }
+
+  }
+
+  &__drop {
+    background: $dark-page;
+    padding: 20px 35px 20px 20px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+
+    &__item {
+      line-height: 29px;
+      min-height: 29px;
+
+      + .main-nav__drop__item {
+        margin-top: 25px;
+      }
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+    &__section {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      .q-icon {
+        margin-right: 12px;
+        font-size: 22px;
+      }
+    }
+  }
+
+}
+
+.app-btn {
+  background: #2E6DCA;
+  width: 100px;
+
+  &:hover {
+    background: $primary;
+  }
+
+  &--border {
+    background: transparent;
+    border-color: #2E6DCA;
+
+    &:hover {
+      background: transparent;
+      border-color: $primary;
+    }
+  }
+
+  &--sm {
+    display: none;
+
+    @include min-screen(md) {
+      display: flex;
+    }
+  }
+}
+
+.user-btn {
+  padding: 0 11px;
+  border-left: $border;
+  border-radius: 0;
+  height: 100%;
+
+  @include min-screen(md) {
+    padding: 0;
+    border: none;
+  }
+
+  &__ava {
+    width: 43px;
+    height: 43px;
+    transition: $transition;
+    padding: 1.5px;
+    background-color: transparent;
+    border-radius: 50%;
+    @include align-justify-center;
+    font-size: 43px;
+
+    @include min-screen(md) {
+      width: 46px;
+      height: 46px;
+      padding: 3px;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+.user-drop {
+  background: $dark-page;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+  padding: 4px 0;
+  width: 250px;
+  border-radius: 0;
+
+  @include min-screen(sm) {
+    padding: 4px 14px 14px;
+    width: 288px;
+  }
+
+  &:after {
+    content: "";
+    right: 21px;
+    top: -10px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 11px 6px;
+    border-color: transparent transparent #181818 transparent;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &__amount {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__btns {
+    .app-btn {
+      border-color: rgba(46, 109, 202, 0.2);
+      font-size: 11px;
+      line-height: 16px;
+      color: #2E6DCA;
+      border-radius: 4px 0 0 4px;
+      width: 100%;
+
+      &:hover {
+        border-color: #2E6DCA;
+      }
+
+      .q-icon {
+        margin-right: 6px;
+      }
+
+      + .app-btn {
+        border-left-color: transparent;
+        border-radius: 0 4px 4px 0;
+
+        &:hover {
+          border: 1px solid #2E6DCA;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 170%;
+    white-space: nowrap;
+
+    &:hover {
+      color: $accent;
+    }
+
+    .q-icon {
+      margin-right: 10px;
+    }
+
+    &.disabled {
+      &:hover {
+        color: #414247;
+      }
+    }
+  }
+
+  &__screens {
+    display: none;
+    margin-bottom: 42px;
+
+    @include min-screen(md) {
+      display: flex;
+    }
+  }
+
+  &__screen {
+    background: transparent;
+    border: 1px solid rgba(113, 114, 125, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    padding: 6px 6px 0;
+    box-shadow: none;
+
+    + .user-drop__screen {
+      margin-left: 10px;
+    }
+
+    &.active {
+      border: 1px solid #2E6DCA;
+    }
+  }
+}
+
+.app-badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

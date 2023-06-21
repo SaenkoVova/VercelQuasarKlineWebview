@@ -1,0 +1,131 @@
+@import "../../lib/mixins";
+
+.app-dialog {
+
+  &__content {
+    position: relative;
+    background: #1B1C22;
+    border: 1px solid #33353D;
+    border-radius: 10px;
+    width: 100%;
+    padding: 30px 10px;
+
+    @media (min-width: 370px) {
+      padding: 30px 15px;
+    }
+    @include min-screen(xs) {
+      width: 440px;
+    }
+    @include min-screen(sm) {
+      padding: 44px 50px 50px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 15px;
+    height: 15px;
+    background: url("src/assets/img/svg/close-dialog.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    z-index: 15;
+    padding: 0;
+    min-height: 15px;
+
+    @include min-screen(sm) {
+      width: 20px;
+      height: 20px;
+      min-height: 20px;
+      top: 20px;
+      right: 20px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.result-dialog {
+  &__img {
+    width: 200px;
+    height: 200px;
+
+    @include min-screen(xs) {
+      width: 260px;
+      height: 260px;
+    }
+
+    img {
+      object-fit: contain !important;
+    }
+  }
+
+  .app-btn {
+    width: 162px;
+    min-height: 60px;
+  }
+}
+
+.transfer-dialog {
+  .app-dialog {
+    &__content {
+      width: 100%;
+      max-width: 650px;
+      padding: 30px 10px 20px;
+
+      @include min-screen(xs) {
+        width: 650px;
+      }
+      @include min-screen(sm) {
+        padding: 37px 60px 60px;
+      }
+    }
+  }
+}
+
+.confirm-dialog {
+  .app-dialog {
+    &__content {
+      padding: 30px 10px 20px;
+
+      @include min-screen(sm) {
+        width: 450px;
+        padding: 50px 20px 40px;
+      }
+    }
+  }
+}
+
+.terminal-dialog {
+  .app-dialog {
+    &__content {
+      background: #08080B;
+      border-radius: 0;
+      padding: 15px 15px 15px;
+      width: 100%;
+    }
+
+    &__close {
+      top: 23px;
+
+      @include min-screen(sm) {
+        width: 16px;
+        height: 16px;
+        right: 15px;
+        top: 21px;
+      }
+    }
+  }
+
+  .q-dialog__inner--minimized {
+    padding: 0;
+
+    > div {
+      max-width: 100%;
+    }
+  }
+}

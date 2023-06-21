@@ -1,0 +1,86 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+
+.dw-page {
+  &__wrap {
+    padding: 30px 15px 20px;
+
+    @include min-screen(lg) {
+      padding: 60px 125px 60px 155px;
+    }
+  }
+}
+
+.page-head {
+  border-bottom: $border;
+
+  @include min-screen(md) {
+    padding: 30px 40px 20px;
+  }
+
+  .title-lg {
+    margin-bottom: 0;
+  }
+}
+
+.col {
+  + .col {
+    border-left: $border;
+
+    .dw-page {
+      &__wrap {
+        padding: 60px 155px 60px 125px;
+      }
+    }
+  }
+}
+
+.app-select {
+  margin-bottom: 30px;
+}
+
+.dw-form {
+  &__title {
+    margin-bottom: 6px;
+
+    &--lg {
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+
+  &__badges {
+    margin-bottom: 30px;
+  }
+}
+
+.dw-input-btns {
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 40px;
+
+  .dark-btn {
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.app-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.deposit-page {
+  &__trade {
+    display: flex;
+    flex-wrap: wrap;
+
+    .dark-btn {
+      height: 40px;
+      width: 100px;
+      margin-bottom: 10px;
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+
+.title-lg {
+  margin-bottom: 12px;
+}
+
+.page-input-wrap {
+  margin-bottom: 10px;
+
+  .page-input {
+    padding-bottom: 20px;
+  }
+}
+
+.page-select {
+  margin-bottom: 30px;
+}
+
+.app-select {
+  &--sm {
+    width: 235px;
+  }
+}
+
+.transfer {
+  &__icon {
+    width: 50px;
+    height: 20px;
+    display: flex;
+    margin: 7px auto 20px;
+
+    @include min-screen(md) {
+      margin: 7px auto 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__inputs {
+    flex-direction: column;
+
+    @include min-screen(sm) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.base-font-size {
+  font-size: $base-font-size;
+}
+
+.app-btn {
+  width: 100%;
+}

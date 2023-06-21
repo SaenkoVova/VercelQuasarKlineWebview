@@ -1,0 +1,37 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+
+.mobile-nav-wrap {
+  padding: 0 18px;
+  border-left: $border;
+  height: 100%;
+  @include align-justify-center;
+
+  @include min-screen(md) {
+    display: none;
+  }
+}
+
+.mobile-nav-btn {
+  &__icon {
+    height: 24px;
+  }
+}
+
+.mob-header-drop {
+  &__bottom {
+    padding: 10px 0;
+    position: relative;
+    margin-top: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -17px;
+      top: 0;
+      height: 1px;
+      width: calc(100% + 34px);
+      background: #33353D;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../lib/mixins";
+
+.confirm {
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include min-screen(md) {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__arrow {
+    @include align-justify-center;
+    width: 35px;
+  }
+}
+
+.coin-swap {
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 30px;
+
+  @include min-screen(sm) {
+    font-size: 20px;
+  }
+}
+
+.confirm-card {
+  background: #27272B;
+  margin-top: 19px;
+
+  &__wrap {
+    padding: 16px 10px 13px;
+
+    @include min-screen(sm) {
+      padding: 28px 30px 20px;
+    }
+  }
+
+  &__row {
+    + .confirm-card__row {
+      margin-top: 14px;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 15px;
+
+    @include min-screen(xs) {
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: right;
+
+      @include min-screen(xs) {
+        font-size: 19px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.info-tooltip {
+  height: 20px;
+  margin-left: 11px;
+}
+
+.convert-result {
+  @include align-column-center;
+
+  &__img {
+    width: 142px;
+    height: 142px;
+
+    @include min-screen(md) {
+      width: 172px;
+      height: 172px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 6px;
+  }
+
+  &__amount {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 13px;
+  }
+
+  &__btns {
+    width: 100%;
+    flex-direction: column;
+
+    @include min-screen(sm) {
+      padding: 0 30px;
+      flex-direction: row;
+    }
+
+    .app-btn {
+      height: 60px;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 100%;
+
+      + .app-btn {
+        margin-top: 10px;
+
+        @include min-screen(sm) {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .confirm {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
