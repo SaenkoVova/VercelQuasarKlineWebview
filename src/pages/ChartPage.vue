@@ -211,6 +211,9 @@ onMounted(async () => {
   chart?.subscribeAction(ActionType.OnPaneDrag, () => {
     chartStore.calcPanesHeight(chart);
   });
+  window.addEventListener("message", (data) => {
+    pairStore.setPair(data.data);
+  })
 });
 
 onBeforeUnmount(async () => {
