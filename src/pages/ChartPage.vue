@@ -212,7 +212,10 @@ onMounted(async () => {
     chartStore.calcPanesHeight(chart);
   });
   window.addEventListener("message", (data) => {
-    pairStore.setPair(data.data);
+
+    if (typeof data.data === "string") {
+      pairStore.setPair(data.data);
+    }
   })
 });
 
