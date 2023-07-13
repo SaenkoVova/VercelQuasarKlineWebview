@@ -283,7 +283,7 @@ onBeforeUnmount(async () => {
 
     <div class="relative-position chart-wrap" id="chart" :style="{ height: isFullScreen ? '100%' : '480px' }">
       <div class="absolute-center">
-        <h1 class="ft-extrabold" style="color: #1C1D21">Valhalla</h1>
+        <h1 class="ft-extrabold" style="color: #1C1D21">Flexy</h1>
       </div>
       <div class="absolute-top-left chart__options clr-secondary ">
 
