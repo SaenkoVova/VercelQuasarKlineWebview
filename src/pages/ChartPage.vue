@@ -212,7 +212,7 @@ onMounted(async () => {
     chartStore.calcPanesHeight(chart);
   });
   window.addEventListener("message", (data) => {
-
+    console.log("Received from RN: ", data)
     if (typeof data.data === "string") {
       pairStore.setPair(data.data);
     }
