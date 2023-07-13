@@ -226,7 +226,7 @@ onBeforeUnmount(async () => {
 <template>
   <q-card class="chart" flat square :class="{'fullscreen': isFullScreen}">
     <div class="flex no-wrap chart__head">
-      <p class="text-xs clr-secondary">{{ t("trade-phrase-25") }}</p>
+      <p class="text-xs clr-secondary">{{ t("Time") }}</p>
       <q-btn-group class="chart__btns q-ml-xs-none  q-ml-sm-xs " flat>
         <q-btn
           :label="t(item.text)"
