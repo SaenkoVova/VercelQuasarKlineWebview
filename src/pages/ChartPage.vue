@@ -22,6 +22,7 @@ import AnalyticsSvg from "components/icons/AnalyticsSvg.vue";
 import IndicatorInfo from "components/statistic/IndicatorInfo.vue";
 import FullscreenSvg from "components/icons/FullscreenSvg.vue";
 import SettingsSvg from "components/icons/SettingsSvg.vue";
+import {useRouter} from "vue-router";
 
 const { style, priceMarkVisible, setPriceMarkVisible, isFullScreen } = useChartStyleConfig();
 const {
@@ -199,6 +200,8 @@ const setPricePrecision = () => {
 }
 
 onMounted(async () => {
+  const router = useRouter();
+  pairStore.setPair(router.currentRoute.value.query.pair as string);
   chart = init("chart");
   chartStore.addAllSelectedIndicatorsToChart(chart);
   chart?.setStyles(style);
@@ -211,12 +214,6 @@ onMounted(async () => {
   chart?.subscribeAction(ActionType.OnPaneDrag, () => {
     chartStore.calcPanesHeight(chart);
   });
-  window.addEventListener("message", (data) => {
-    console.log("Received from RN: ", data)
-    if (typeof data.data === "string") {
-      pairStore.setPair(data.data);
-    }
-  })
 });
 
 onBeforeUnmount(async () => {
