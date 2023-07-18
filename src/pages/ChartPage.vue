@@ -258,10 +258,10 @@ onBeforeUnmount(async () => {
         </q-btn>
       </q-btn-group>
 
-      <q-btn-group class="chart__btns q-ml-auto" flat>
-        <q-btn class="chart-btn clr-secondary" no-caps :class="{active: true}" flat>
-          Original
-        </q-btn>
+<!--      <q-btn-group class="chart__btns q-ml-auto" flat>-->
+<!--        <q-btn class="chart-btn clr-secondary" no-caps :class="{active: true}" flat>-->
+<!--          Original-->
+<!--        </q-btn>-->
         <!--        <q-btn class="chart-btn clr-secondary" no-caps flat>-->
         <!--          Trading View-->
         <!--        </q-btn>-->
@@ -269,15 +269,15 @@ onBeforeUnmount(async () => {
         <!--          Depth-->
         <!--        </q-btn>-->
 
-        <q-btn flat class="chart-btn chart-btn--icon q-ml-xs q-ml-sm-md" @click="isFullScreen = !isFullScreen">
-          <fullscreen-svg />
-        </q-btn>
+<!--        <q-btn flat class="chart-btn chart-btn&#45;&#45;icon q-ml-xs q-ml-sm-md" @click="isFullScreen = !isFullScreen">-->
+<!--          <fullscreen-svg />-->
+<!--        </q-btn>-->
 
         <!--        <q-btn flat class="chart-btn chart-btn&#45;&#45;icon" >-->
         <!--          <function-svg/>-->
         <!--        </q-btn>-->
 
-      </q-btn-group>
+<!--      </q-btn-group>-->
     </div>
 
 
